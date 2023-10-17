@@ -7,6 +7,8 @@
 const playButtonDomElement = document.getElementById('button');
 //recupero number list dal DOM con getElement by ID
 const numbersDomElement = document.getElementById('numeri-random');
+//recupero timer dal DOM
+const timerOutDomElement = document.getElementById('timer');
 
 //aggiungo eventlistener, al click del bottone inizia la funzione
 playButtonDomElement.addEventListener('click', function () {
@@ -29,5 +31,25 @@ playButtonDomElement.addEventListener('click', function () {
 
   //recupero l'elemento dal DOM per far stampare i 5 numeri random in pagina
   numbersDomElement.innerHTML = randomNumbersArray
+
+  //stamparee countdown in pagina
+  let countdown = 5;
+  timerOutDomElement.innerHTML = 'Countdown: ' + countdown;
+  //creo intervallo per il countdown
+  const countdownInterval = setInterval(function () {
+    countdown--;
+    //visualizza il countdown aggiornato nella pagina
+    timerOutDomElement.innerHTML = 'Countdown: ' + countdown;
+    //condizionali
+    //se il countdown è minore o uguale di 0
+    if (countdown <= 0) {
+      //allora cancella il countdown
+      clearInterval(countdownInterval);
+      //cancella numeri casuali dalla pagina
+      numbersDomElement.innerHTML = '';
+      //cancella il countdown dalla pagina
+      timerOutDomElement.innerHTML = '';
+    }
+  }, 1000);
 })
 

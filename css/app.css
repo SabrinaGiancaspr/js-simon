@@ -1,0 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  max-width: 900px;
+  margin: 0 auto;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button-container{
+  padding: 10px 10px 10px 10px;
+}
+
+#button{
+  padding: 10px 10px 10px 10px;
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#numeri-random{
+  font-size: 20px;
+}

@@ -58,15 +58,27 @@ section {
   font-size: 30px;
   color: rgb(221, 9, 9);
   font-weight: bold;
+  background-color: rgba(239, 239, 239, 0.601);
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #timeout {
   font-size: 30px;
   color: red;
   font-weight: bold;
+  background-color: rgba(247, 255, 255, 0.694);
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #numeri-ricordati {
   font-size: 30px;
   font-weight: bold;
+  background-color: rgba(248, 248, 248, 0.676);
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
